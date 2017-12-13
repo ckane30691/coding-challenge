@@ -16,7 +16,7 @@ class Splash extends React.Component {
                         <Link className="biz" to="/">Try Hiretual for Business</Link>
                         <Link className="header-link" to="/">Pricing</Link>
                         <Link className="header-link" to="/">Sign Up</Link>
-                        <Link className="header-link" to="/">Log in</Link>
+                        <Link className="header-link" to="/dashboard">Log in</Link>
                     </div>
                 </div>
 

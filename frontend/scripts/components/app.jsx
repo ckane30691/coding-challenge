@@ -6,16 +6,14 @@ import {
     Link,
     HashRouter
 } from 'react-router-dom';
-import Splash from "./greeting/splash.jsx";
+import Splash from "./greeting/splash";
+import Dashboard from "./dashboard/dashboard"
 
 const App = () => (
     <div>
-        <header>
-        </header>
-
         <Switch>
             <Route exact path="/" component={Splash} />
-            {/* <Route exact path="/:vitamin" component={ProductIndexContainer} /> */}
+            <Route exact path="/dashboard" component={Dashboard} />
         </Switch>
     </div>
 );
