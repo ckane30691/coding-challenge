@@ -28,9 +28,9 @@ export default class Slider extends React.Component {
         : this.setState({ slideCount: 1})
     }
 
-    // previousSlide() {
-    //     this.setState({ slideCount: this.state.slideCount - 1 })
-    // }
+    previousSlide() {
+        this.setState({ slideCount: this.state.slideCount - 1 })
+    }
 
     render() {
         console.log(this.state.slideCount)

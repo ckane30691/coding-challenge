@@ -6,7 +6,7 @@ const SlideOne = (props) => {
         backgroundImage: 'url(https://s3.amazonaws.com/coding-challenge-hiretual/hiretual_ai.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        width: '700px',
+        width: '55vw',
         height: '466.66px'
     }
     
