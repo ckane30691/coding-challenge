@@ -25995,7 +25995,54 @@ var Dashboard = function (_React$Component) {
                             src: 'https://s3.amazonaws.com/coding-challenge-hiretual/profile.png' })
                     )
                 ),
-                _react2.default.createElement('div', { className: 'side-bar' })
+                _react2.default.createElement(
+                    'div',
+                    { className: 'side-bar' },
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { className: 'side-link', to: '#' },
+                        _react2.default.createElement('img', {
+                            className: 'globe-icon',
+                            src: 'https://s3.amazonaws.com/coding-challenge-hiretual/globe.png'
+                        }),
+                        '\xA0 ',
+                        _react2.default.createElement('span', null),
+                        ' Discovery'
+                    ),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { className: 'side-link', to: '#' },
+                        '\uD83D\uDDB4 \xA0 ',
+                        _react2.default.createElement('span', null),
+                        ' Pipeline'
+                    ),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { className: 'side-link', to: '#' },
+                        '\uD83D\uDDB4 \xA0 ',
+                        _react2.default.createElement('span', null),
+                        ' Account'
+                    ),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { className: 'side-link', to: '#' },
+                        '\u2699 \xA0 ',
+                        _react2.default.createElement('span', null),
+                        ' Integration'
+                    ),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { className: 'side-link', to: '#' },
+                        '\uD83D\uDCAC ',
+                        _react2.default.createElement('span', null),
+                        ' Help Center'
+                    ),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { className: 'side-btn', to: '#' },
+                        'Try Hiretual Premium'
+                    )
+                )
             );
         }
     }]);

@@ -176,8 +176,7 @@ span {
 .dash-home-link {
     background: #242A34;
     color: #fff;
-    padding-left: 5.5vw;
-    padding-right: 5.5vw;
+    width: 18vw;
     padding-top:10px;
     font-weight: 600;
 }
@@ -201,4 +200,62 @@ span {
 .profile-icon {
     width: 30px;
     height: 30px;
+}
+
+.side-bar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #242A34;
+    color: #fff;
+    height: 100vh;
+    width: 18vw;
+    box-sizing: border-box;
+    padding-top:10px;
+}
+
+.side-link {
+    border-bottom: 1px solid #444;
+    font-size: 1.2vw;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-weight: 300;
+}
+
+.side-link:hover {
+    background-color: rgba(225,225,225,.2)
+}
+
+.side-link span {
+    margin-right: 10px;
+}
+
+.globe-icon {
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin-top: 3px;
+}
+
+.side-btn {
+    text-align: center;
+    width: 80%;
+    position: absolute;
+    bottom: 48vh;
+    left: 20px;
+    background-color: #007EDB;
+    color: white;
+    border-color: #007EDB;
+    font-size: 1vw;
+    font-weight: 600;
+    padding: 11px 17px;
+    word-spacing: 3px;
+    border-radius: 3px;
+}
+
+.side-btn:hover {
+    background-color: #78A7CC;
+    border-color: #78A7CC;
+    color: white;
 }

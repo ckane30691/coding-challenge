@@ -30,6 +30,21 @@ class Dashboard extends React.Component {
                 </div>
 
                 <div className="side-bar">
+                    <Link className="side-link" to='#'>
+                    <img 
+                        className="globe-icon" 
+                        src="https://s3.amazonaws.com/coding-challenge-hiretual/globe.png" 
+                    />
+                       &nbsp; <span /> Discovery
+                    </Link>
+                   
+                    <Link className="side-link" to='#'>🖴 &nbsp; <span/> Pipeline</Link>
+                    <Link className="side-link" to='#'>🖴 &nbsp; <span/> Account</Link>
+                    <Link className="side-link" to='#'>⚙ &nbsp; <span/> Integration</Link>
+                    <Link className="side-link" to='#'>💬 <span/> Help Center</Link>
+
+
+                    <Link className="side-btn" to='#'>Try Hiretual Premium</Link>
                 </div>
             </div>
         )
