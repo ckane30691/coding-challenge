@@ -25551,6 +25551,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(17);
 
+var _slider = __webpack_require__(121);
+
+var _slider2 = _interopRequireDefault(_slider);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25573,8 +25577,35 @@ var Splash = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
-                ' REACT IS WORKING'
+                { className: 'splash-body' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'splash-header' },
+                    _react2.default.createElement('img', { className: 'hiretual-logo',
+                        alt: 'hiretual logo',
+                        src: 'https://s3.amazonaws.com/coding-challenge-hiretual/logo.png' }),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/' },
+                        'Try Hiretual for Business'
+                    ),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/' },
+                        'Pricing'
+                    ),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/' },
+                        'Sign Up'
+                    ),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/' },
+                        'Log in'
+                    )
+                ),
+                _react2.default.createElement(_slider2.default, null)
             );
         }
     }]);
@@ -25720,6 +25751,257 @@ Object.defineProperty(exports, "__esModule", {
 var _redux = __webpack_require__(33);
 
 exports.default = (0, _redux.combineReducers)({});
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _slide_one = __webpack_require__(122);
+
+var _slide_one2 = _interopRequireDefault(_slide_one);
+
+var _slide_two = __webpack_require__(123);
+
+var _slide_two2 = _interopRequireDefault(_slide_two);
+
+var _slide_three = __webpack_require__(124);
+
+var _slide_three2 = _interopRequireDefault(_slide_three);
+
+var _right_arrow = __webpack_require__(125);
+
+var _right_arrow2 = _interopRequireDefault(_right_arrow);
+
+var _left_arrow = __webpack_require__(126);
+
+var _left_arrow2 = _interopRequireDefault(_left_arrow);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Slider = function (_React$Component) {
+    _inherits(Slider, _React$Component);
+
+    function Slider(props) {
+        _classCallCheck(this, Slider);
+
+        var _this = _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).call(this, props));
+
+        _this.state = {
+            slideCount: 1
+        };
+        _this.nextSlide = _this.nextSlide.bind(_this);
+        _this.previousSlide = _this.previousSlide.bind(_this);
+        return _this;
+    }
+
+    _createClass(Slider, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            window.setInterval(function () {
+                _this2.nextSlide();
+            }, 2500);
+        }
+    }, {
+        key: 'nextSlide',
+        value: function nextSlide() {
+            return this.state.slideCount < 2 ? this.setState({ slideCount: this.state.slideCount + 1 }) : this.setState({ slideCount: 1 });
+        }
+
+        // previousSlide() {
+        //     this.setState({ slideCount: this.state.slideCount - 1 })
+        // }
+
+    }, {
+        key: 'render',
+        value: function render() {
+            console.log(this.state.slideCount);
+            return _react2.default.createElement(
+                'div',
+                { className: 'slider' },
+                this.state.slideCount === 1 ? _react2.default.createElement(_slide_one2.default, null) : null,
+                this.state.slideCount === 2 ? _react2.default.createElement(_slide_two2.default, null) : null,
+                this.state.slideCount === 3 ? _react2.default.createElement(_slide_three2.default, null) : null,
+                _react2.default.createElement(_right_arrow2.default, { nextSlide: this.nextSlide }),
+                _react2.default.createElement(_left_arrow2.default, { previousSlide: this.previousSlide })
+            );
+        }
+    }]);
+
+    return Slider;
+}(_react2.default.Component);
+
+exports.default = Slider;
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SlideOne = function SlideOne(props) {
+
+    var background = {
+        backgroundImage: 'url(https://s3.amazonaws.com/coding-challenge-hiretual/hiretual_ai.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '700px',
+        height: '466.66px'
+    };
+
+    return _react2.default.createElement('div', { style: background, className: 'slide' });
+};
+
+exports.default = SlideOne;
+
+/***/ }),
+/* 123 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SlideTwo = function SlideTwo(props) {
+
+    var background = {
+        backgroundImage: 'url(https://s3.amazonaws.com/coding-challenge-hiretual/landing-page-prod-v1-contact.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '700px',
+        height: '466.66px'
+    };
+
+    return _react2.default.createElement('div', { style: background, className: 'slide' });
+};
+
+exports.default = SlideTwo;
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SlideThree = function SlideThree(props) {
+
+    var background = {
+        backgroundImage: 'url(https://s3.amazonaws.com/coding-challenge-hiretual/landing-page-prod-v1-sourceasateam.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '700px',
+        height: '466.66px'
+    };
+
+    return _react2.default.createElement('div', { style: background, className: 'slide' });
+};
+
+exports.default = SlideThree;
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var RightArrow = function RightArrow(props) {
+    return _react2.default.createElement(
+        "div",
+        { onClick: props.nextSlide, className: "nextArrow" },
+        _react2.default.createElement("i", { className: "fa fa-arrow-right fa-2x", "aria-hidden": "true" })
+    );
+};
+
+exports.default = RightArrow;
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var LeftArrow = function LeftArrow(props) {
+    return _react2.default.createElement(
+        "div",
+        { onClick: props.previousSlide, className: "backArrow" },
+        _react2.default.createElement("i", { className: "fa fa-arrow-left fa-2x", "aria-hidden": "true" })
+    );
+};
+
+exports.default = LeftArrow;
 
 /***/ })
 /******/ ]);
