@@ -25956,10 +25956,26 @@ var Dashboard = function (_React$Component) {
     function Dashboard() {
         _classCallCheck(this, Dashboard);
 
-        return _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).call(this));
+
+        _this.transformSideBar = _this.transformSideBar.bind(_this);
+        _this.state = { showMenu: true };
+        return _this;
     }
 
     _createClass(Dashboard, [{
+        key: 'transformSideBar',
+        value: function transformSideBar() {
+            var body = document.getElementsByClassName('dash-body')[0];
+            if (this.state.showMenu === true) {
+                body.style.transform = "translateX(-18vw)";
+                this.setState({ showMenu: false });
+            } else {
+                body.style.transform = "translateX(0px)";
+                this.setState({ showMenu: true });
+            }
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -25975,7 +25991,7 @@ var Dashboard = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'burger' },
+                        { className: 'burger', onClick: this.transformSideBar },
                         '|||'
                     ),
                     _react2.default.createElement(

@@ -2,6 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Dashboard extends React.Component {
+    constructor() {
+        super();
+        this.transformSideBar = this.transformSideBar.bind(this);
+        this.state = {showMenu: true}
+    }
+
+    transformSideBar() {
+        let body = document.getElementsByClassName('dash-body')[0];
+        if (this.state.showMenu === true) {
+            body.style.transform = "translateX(-18vw)";
+            this.setState({showMenu: false});
+        } else {
+            body.style.transform = "translateX(0px)";
+            this.setState({ showMenu: true });
+        }
+    }
 
     render() {
         return (
@@ -9,7 +25,7 @@ class Dashboard extends React.Component {
                 <div className="dash-header">
                     <Link className="dash-home-link" to='/'>HIRETUAL</Link>
 
-                    <div className="burger">
+                    <div className="burger" onClick={this.transformSideBar}>
                         |||
                     </div>
 

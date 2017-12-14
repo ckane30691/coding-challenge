@@ -164,6 +164,7 @@ span {
     left: 21vw;
     top: 10px;
     transform: rotate(90deg);
+    cursor: pointer;
 }
 
 .dash-header-ctnr {
@@ -204,7 +205,11 @@ span {
 
 .dash-body {
     display: flex;
+    -webkit-transition: linear .3s;
+    -moz-transition: linear .3s;
+    transition: linear .3s;
 }
+
 
 .side-bar {
     position: relative;
@@ -296,6 +301,8 @@ span {
     height: 60px;
     float: left;
     margin-right: 60px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 255, .2);
 }
 
 .install-btn {
@@ -306,4 +313,9 @@ span {
     font-size: 1vw;
     border-radius: 30px;
     position: absolute;
+}
+
+.install-btn:hover {
+    background-color: #c9302c;
+    border-color: #ac2925;
 }
