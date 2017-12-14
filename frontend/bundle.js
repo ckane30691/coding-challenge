@@ -25964,7 +25964,7 @@ var Dashboard = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: 'dash-body' },
+                null,
                 _react2.default.createElement(
                     'div',
                     { className: 'dash-header' },
@@ -25997,50 +25997,81 @@ var Dashboard = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'div',
-                    { className: 'side-bar' },
+                    { className: 'dash-body' },
                     _react2.default.createElement(
-                        _reactRouterDom.Link,
-                        { className: 'side-link', to: '#' },
-                        _react2.default.createElement('img', {
-                            className: 'globe-icon',
-                            src: 'https://s3.amazonaws.com/coding-challenge-hiretual/globe.png'
-                        }),
-                        '\xA0 ',
-                        _react2.default.createElement('span', null),
-                        ' Discovery'
+                        'div',
+                        { className: 'side-bar' },
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { className: 'side-link', to: '#' },
+                            _react2.default.createElement('img', {
+                                className: 'globe-icon',
+                                src: 'https://s3.amazonaws.com/coding-challenge-hiretual/globe.png'
+                            }),
+                            '\xA0 ',
+                            _react2.default.createElement('span', null),
+                            ' Discovery'
+                        ),
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { className: 'side-link', to: '#' },
+                            '\uD83D\uDDB4 \xA0 ',
+                            _react2.default.createElement('span', null),
+                            ' Pipeline'
+                        ),
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { className: 'side-link', to: '#' },
+                            '\uD83D\uDDB4 \xA0 ',
+                            _react2.default.createElement('span', null),
+                            ' Account'
+                        ),
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { className: 'side-link', to: '#' },
+                            '\u2699 \xA0 ',
+                            _react2.default.createElement('span', null),
+                            ' Integration'
+                        ),
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { className: 'side-link', to: '#' },
+                            '\uD83D\uDCAC ',
+                            _react2.default.createElement('span', null),
+                            ' Help Center'
+                        ),
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { className: 'side-btn', to: '#' },
+                            'Try Hiretual Premium'
+                        )
                     ),
                     _react2.default.createElement(
-                        _reactRouterDom.Link,
-                        { className: 'side-link', to: '#' },
-                        '\uD83D\uDDB4 \xA0 ',
-                        _react2.default.createElement('span', null),
-                        ' Pipeline'
-                    ),
-                    _react2.default.createElement(
-                        _reactRouterDom.Link,
-                        { className: 'side-link', to: '#' },
-                        '\uD83D\uDDB4 \xA0 ',
-                        _react2.default.createElement('span', null),
-                        ' Account'
-                    ),
-                    _react2.default.createElement(
-                        _reactRouterDom.Link,
-                        { className: 'side-link', to: '#' },
-                        '\u2699 \xA0 ',
-                        _react2.default.createElement('span', null),
-                        ' Integration'
-                    ),
-                    _react2.default.createElement(
-                        _reactRouterDom.Link,
-                        { className: 'side-link', to: '#' },
-                        '\uD83D\uDCAC ',
-                        _react2.default.createElement('span', null),
-                        ' Help Center'
-                    ),
-                    _react2.default.createElement(
-                        _reactRouterDom.Link,
-                        { className: 'side-btn', to: '#' },
-                        'Try Hiretual Premium'
+                        'div',
+                        { className: 'dash-console' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'add-to-chrome-ctnr' },
+                            _react2.default.createElement('img', {
+                                className: 'chrome-logo',
+                                src: 'https://hiretual.com/assets/img/chrome.png',
+                                alt: 'chrome logo' }),
+                            _react2.default.createElement(
+                                'h1',
+                                null,
+                                ' Add Hiretual to Chrome '
+                            ),
+                            _react2.default.createElement(
+                                'p',
+                                null,
+                                'Hiretual is now assisting you in Google Chrome'
+                            ),
+                            _react2.default.createElement(
+                                _reactRouterDom.Link,
+                                { className: 'install-btn', to: '#' },
+                                'Install Now'
+                            )
+                        )
                     )
                 )
             );

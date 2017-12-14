@@ -202,6 +202,10 @@ span {
     height: 30px;
 }
 
+.dash-body {
+    display: flex;
+}
+
 .side-bar {
     position: relative;
     display: flex;
@@ -258,4 +262,48 @@ span {
     background-color: #78A7CC;
     border-color: #78A7CC;
     color: white;
+}
+
+.add-to-chrome-ctnr {
+    position: relative;
+    width: 55vw;
+    margin-left: 50px;
+    margin-top:10px;
+    padding-top: 5px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    line-height: 1.42857143;
+    color: #333;
+    border-bottom: 1px solid #bfbfbf;
+    border-left: 1px solid #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+    border-bottom-width: 2px;
+    border-color: rgba(0,0,0,0.15);
+}
+
+.add-to-chrome-ctnr h1 {
+    margin-bottom: 10px;
+    font-size: 1.3vw;
+}
+
+.add-to-chrome-ctnr p {
+    font-size: 1vw;
+    margin-bottom: 8px;
+}
+
+.chrome-logo{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 60px;
+}
+
+.install-btn {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    padding: 9px 25px;
+    font-size: 1vw;
+    border-radius: 30px;
+    position: absolute;
 }
